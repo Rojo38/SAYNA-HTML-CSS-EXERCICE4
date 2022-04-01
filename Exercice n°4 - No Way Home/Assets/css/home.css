@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-size: 62.5%;
+}
+
+ul {
+    padding: 0;
+    /* Les balises "ul" ont un padding-left par défaut ; je les enlève */
+}
+
+
+/* HEADER start */
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #B11313;
+    justify-content: space-evenly;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Pour bien centrer verticalement, j'utilise [ display: flex; align-items: center; ] */
+}
+
+.logo>img {
+    margin: 0 0.5rem;
+    /* Pour ajouter plus d'espaces entre les 3 Logo */
+}
+
+.nav_bar {
+    width: 50%;
+    /* Pour plus de LARGEUR à ce DIV */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* Pour bien aligner horizontalement */
+}
+
+header nav li {
+    display: inline;
+    /* Pour que la liste s'aligne sur la même ligne */
+}
+
+header nav a {
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration: none;
+    /* Pour enlever le style par défaut des Liens */
+}
+
+header nav a:hover,
+header nav a:active {
+    font-weight: 600;
+    /*  Le texte (le lien) en lui-même devient GRAS, lorsque la souris surmonte ces liens de navigation, ou si le lien est visité */
+}
+
+@media all and (max-width: 770px) {
+    .nav_bar {
+        display: none;
+    }
+}
+
+
+/* HEADER end */
+
+
+/* MAIN  start*/
+
+
+/* section1 */
+
+.section1 {
+    width: 100%;
+    height: 56rem;
+    background: url(../Illustration/img1.png) no-repeat 50% 50%;
+    background-size: cover;
+    /* Background bien Centré et qui couvre à 100% la SECTION  */
+}
+
+.main_section1 {
+    top: 30%;
+    left: 20%;
+    color: #FFF;
+    position: relative;
+    display: inline-block;
+    /* position: relative; Pour que ce DIV se positionne bien par rapport à sa balise Parent (.section1) */
+}
+
+.section1 h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Far From Homecoming';
+}
+
+.section1 a {
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    /* un padding-top pour bien centrer Verticalement */
+    border-radius: 1rem;
+    display: inline-block;
+    /* display: inline-block; pour que les 2 liens (ou bouttons) se mettent sur la même ligne , et qu'on puisse leur donner des Longueurs et Largeurs comme les éléments de type BLOCK */
+    text-decoration: none;
+    font-family: sans-serif;
+    border: 2px solid #FFF;
+}
+
+.section1 a:first-of-type {
+    color: #B11313;
+    background-color: #FFF;
+    /* ceci est le style du premier Boutton */
+    margin: 5rem 1rem 2rem 1rem;
+    /* margin pour espacements */
+}
+
+.section1 a:last-of-type {
+    color: #FFF;
+    /* ceci est le style du second Boutton */
+    margin: 5rem 1rem 2rem 1rem;
+    /* margin pour espacements */
+}
+
+.section1 a:last-of-type:hover {
+    color: #B11313;
+    transition: 0.25s;
+    background-color: #FFF;
+    /* comportement du second Boutton lorsque la souris la survole */
+    /* une petite transition pour que ça ne soit pas brutale pour les yeux, mais plus jolie à voir */
+}
+
+.section1 p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+/* section2 */
+
+.section2 {
+    color: #FFF;
+    height: 55rem;
+    background: #B11313;
+}
+
+.section2>h1 {
+    font-size: 3rem;
+    margin-left: 10%;
+    font-family: 'Far From Homecoming';
+}
+
+.section2>p {
+    font-size: 1rem;
+    margin-left: 10%;
+    /* margin-left: 10%; pour bien positionner */
+}
+
+.three_spiderman {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    /* display: flex; pour bien positionner les 3 FIGURES */
+}
+
+.section2 figure {
+    width: 22%;
+    text-align: center;
+    /* la largeur de chaque élément FIGURE va prendre 22% de celle de son élément parent (= 22% largeur de la largeur de l'écran) */
+}
+
+.section2 figure>img {
+    width: 100%;
+    height: auto;
+    /* va prendre 100% de la largeur de l'élément FIGURE */
+}
+
+.section2 figure>figcaption {
+    width: 100%;
+    margin: 3rem 0;
+    font-size: 1rem;
+    text-align: justify;
+    /* va prendre 100% de la largeur de l'élément FIGURE */
+}
+
+.section2 a {
+    width: 14rem;
+    height: 3rem;
+    color: #B11313;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #FFF;
+    padding-top: 0.5rem;
+    /* un padding-top pour bien centrer Verticalement */
+    border-radius: 1rem;
+    display: inline-block;
+    /* display: inline-block; pour que les 2 liens (ou bouttons) se mettent sur la même ligne , et qu'on puisse leur donner des Longueurs et Largeurs comme les éléments de type BLOCK */
+    text-decoration: none;
+    font-family: sans-serif;
+    border: 2px solid #FFF;
+}
+
+
+/* section3 */
+
+.section3 {
+    height: 40vw;
+    color: #FFF;
+    background-color: #114C92;
+}
+
+.section3 h1 {
+    font-size: 2rem;
+    font-family: 'Far From Homecoming';
+}
+
+.section3 p {
+    font-size: 1.25rem;
+}
+
+.section3>img {
+    width: auto;
+    height: 40vw;
+}
+
+.commande_costume {
+    float: right;
+    margin: 5rem;
+    text-align: center;
+}
+
+.section3 form input {
+    width: 25rem;
+    height: 2rem;
+    color: #000;
+    margin-top: 1rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #000;
+}
+
+.section3 form button {
+    width: 13rem;
+    height: 3rem;
+    color: #FFF;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid #FFF;
+    background-color: #114C92;
+}
+
+
+/* section4 */
+
+.section4 {
+    color: #FFF;
+    height: 55rem;
+    position: relative;
+    background: #B11313;
+}
+
+.fiche_inscription {
+    width: 45%;
+    display: inline-block;
+    margin: 10rem 0 0 10rem;
+}
+
+.section4 h1 {
+    font-size: 2rem;
+    font-family: 'Far From Homecoming';
+}
+
+.section4 p:first-of-type {
+    font-size: 1.25rem;
+    margin-bottom: 5rem;
+}
+
+.section4 input {
+    margin-bottom: 2rem;
+}
+
+.section4 input.info {
+    width: 25rem;
+    height: 2rem;
+    color: #FFF;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background: #B11313;
+    border: 2px solid #FFF;
+}
+
+.section4 p.checkbox {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.section4 button {
+    width: 15rem;
+    height: 4rem;
+    border: none;
+    color: #B11313;
+    margin-left: 4rem;
+    font-size: 1.25rem;
+    background: #FFF;
+    border-radius: 1rem;
+    font-family: sans-serif;
+}
+
+.section4>img {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+/* FOOTER start */
+
+footer {
+    height: 20rem;
+    font-size: 1rem;
+    background: #000;
+}
+
+
+/* section I : Nav & Logo & Langue */
+
+section.nav_again {
+    display: flex;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav1 {
+    width: 35%;
+    /* La largeur la mieux convenable */
+    /* Ceci est la barre de navigation sur la côté Gauche */
+}
+
+.nav1 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo_again {
+    margin: 0;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Pour bien centrer verticalement les logo */
+}
+
+.logo_again>img {
+    margin: 0 0.5rem;
+    /* Pour ajouter un peu d'espace entre les 3 logo */
+}
+
+footer nav li {
+    margin: 0;
+    display: inline-block;
+    /* Pour aligner sur une ligne les listes */
+}
+
+footer nav li>a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav2 {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ceci est la barre de navigation sur la côté Droite  */
+}
+
+.nav2>nav {
+    width: 50%;
+    /* la largeur convenable */
+}
+
+.nav2 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer select {
+    width: 50%;
+    height: 2rem;
+    border: none;
+    color: #FFF;
+    margin-right: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #B11313;
+    /* Voici le Style du choix de la langue utilisée dans la page */
+}
+
+
+/* section II : Social Medias */
+
+section.social_medias {
+    display: flex;
+    color: #FFF;
+    height: 10rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.media_logo {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #B11313;
+    /* Style du Conteneur des logo (Logo : Réseaux sociaux) */
+}
+
+.img_media_logo {
+    width: 2rem;
+    height: 2rem;
+    /* Taille des Logo */
+}
+
+
+/* Plan de secours pour le RESPONSIVE */
+
+section.plan_de_secours {
+    display: none;
+    height: 12rem;
+    flex-direction: column;
+}
+
+div.secours_nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_secours {
+    width: 40%;
+}
+
+.secours {
+    margin: 0;
+    width: 30%;
+}
+
+footer nav li.list {
+    display: block;
+}
+
+.secours>select {
+    margin: 0;
+    width: 90%;
+}
+
+.logo_secours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media all and (max-width: 1200px) {
+    section.nav_again {
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 990px) {
+    section.plan_de_secours {
+        display: block;
+    }
+    section.nav_again {
+        display: none;
+    }
+    section.social_medias {
+        height: 8rem;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .media_logo {
+        width: 2rem;
+        height: 2rem;
+    }
+    .img_media_logo {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+
+/* FOOTER end */

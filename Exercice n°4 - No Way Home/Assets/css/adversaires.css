@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-size: 62.5%;
+}
+
+ul {
+    padding: 0;
+    /* Les balises "ul" ont un padding-left par défaut ; je les enlève */
+}
+
+
+/* HEADER start */
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F1C530;
+    justify-content: space-evenly;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Pour bien centrer verticalement, j'utilise [ display: flex; align-items: center; ] */
+}
+
+.logo>img {
+    margin: 0 0.5rem;
+    /* Pour ajouter plus d'espaces entre les 3 Logo */
+}
+
+.nav_bar {
+    width: 50%;
+    /* Pour plus de LARGEUR à ce DIV */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* Pour bien aligner horizontalement */
+}
+
+header nav li {
+    display: inline;
+    /* Pour que la liste s'aligne sur la même ligne */
+}
+
+header nav a {
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration: none;
+    /* Pour enlever le style par défaut des Liens */
+}
+
+header nav a:hover,
+header nav a:active {
+    font-weight: 600;
+    /*  Le texte (le lien) en lui-même devient GRAS, lorsque la souris surmonte ces liens de navigation, ou si le lien est visité */
+}
+
+@media all and (max-width: 770px) {
+    .nav_bar {
+        display: none;
+    }
+}
+
+
+/* HEADER end */
+
+
+/* MAIN start */
+
+
+/* section1 */
+
+.section1 {
+    color: #FFF;
+    height: 37rem;
+    background: url(../Illustration/img7.png) no-repeat center;
+    background-size: cover;
+}
+
+.section1>div {
+    padding: 10rem 0 0 5rem;
+}
+
+.section1 h1 {
+    font-size: 5rem;
+    font-family: 'Far From Homecoming';
+}
+
+.section1 p {
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+
+/* section2 */
+
+.section2 {
+    background: #F1C530;
+    height: 55rem;
+}
+
+
+/* MAIN end */
+
+
+/* FOOTER start */
+
+footer {
+    height: 20rem;
+    font-size: 1rem;
+    background: #000;
+}
+
+
+/* section I : Nav & Logo & Langue */
+
+section.nav_again {
+    display: flex;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav1 {
+    width: 35%;
+    /* La largeur la mieux convenable */
+    /* Ceci est la barre de navigation sur la côté Gauche */
+}
+
+.nav1 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo_again {
+    margin: 0;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Pour bien centrer verticalement les logo */
+}
+
+.logo_again>img {
+    margin: 0 0.5rem;
+    /* Pour ajouter un peu d'espace entre les 3 logo */
+}
+
+footer nav li {
+    margin: 0;
+    display: inline-block;
+    /* Pour aligner sur une ligne les listes */
+}
+
+footer nav li>a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav2 {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ceci est la barre de navigation sur la côté Droite  */
+}
+
+.nav2>nav {
+    width: 50%;
+    /* la largeur convenable */
+}
+
+.nav2 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer select {
+    width: 50%;
+    height: 2rem;
+    border: none;
+    color: #FFF;
+    margin-right: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #F1C530;
+    /* Voici le Style du choix de la langue utilisée dans la page */
+}
+
+
+/* section II : Social Medias */
+
+section.social_medias {
+    display: flex;
+    color: #FFF;
+    height: 10rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.media_logo {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #F1C530;
+    /* Style du Conteneur des logo (Logo : Réseaux sociaux) */
+}
+
+.img_media_logo {
+    width: 2rem;
+    height: 2rem;
+    /* Taille des Logo */
+}
+
+
+/* Plan de secours pour le RESPONSIVE */
+
+section.plan_de_secours {
+    display: none;
+    height: 12rem;
+    flex-direction: column;
+}
+
+div.secours_nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_secours {
+    width: 40%;
+}
+
+.secours {
+    margin: 0;
+    width: 30%;
+}
+
+footer nav li.list {
+    display: block;
+}
+
+.secours>select {
+    margin: 0;
+    width: 90%;
+}
+
+.logo_secours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media all and (max-width: 1200px) {
+    section.nav_again {
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 990px) {
+    section.plan_de_secours {
+        display: block;
+    }
+    section.nav_again {
+        display: none;
+    }
+    section.social_medias {
+        height: 8rem;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .media_logo {
+        width: 2rem;
+        height: 2rem;
+    }
+    .img_media_logo {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+
+/* FOOTER end */
